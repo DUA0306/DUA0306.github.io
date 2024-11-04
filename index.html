@@ -2,52 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹페이지</title>
     <style>
-        div{
-            /* display:inline-block; */
-            width: 150px;
-            height: 60px;
-            border: 1px solid #715;
-            background-color: beige;
+        #name{
+            position: absolute;
+            right: 80px;
+            top:50px;
         }
-        #n3:hover{opacity: 0.2;
+        #title{
+            background-color: rgb(238, 213, 226);
+            border: 5px solid rgb(221, 177, 203);
+            border-radius:40px;
+            padding: 20px;
+            text-align: center;
         }
-        .sub{
+        nav{
+            background-color: rgb(152, 152, 180);
+            width:100%
+        }
+        nav ul{
+            width: 500px;
+        }
+        nav ul li{
+            display:inline-block;
+            text-align: center;
+            list-style-type:none ;
+            padding: 10px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        section{
+            display: inline-block;
+            width:20%;
+            height:80%;
+
+        }
+        #search{
+            padding:20px;
+        }
+        #review{
+            margin-left: 20px;
+            background-color: rgb(212, 235, 158);
+            padding:20px;
+        }
+           
+        #news{ 
+            margin-left: 20px;
+            background-color: rgb(209, 249, 209);
+            padding:20px;
+        }
+        #community{
+            margin-left: 20px;
             background-color: aliceblue;
-            position: relative;
-            top: 10px;
-            left: 30px;
-        }
-        #fix{
-            position: fixed;
-            /* position:absolute; */
-            bottom: 50px;
-            right: 10px;
-        }
-        #float{
-            position: fixed;
-            left:300px;
-            width: 400px;
-            height:300px;
+            padding:20px;
         }
     </style>
 </head>
 <body>
-    <div>DIV1</div>
-    <div class="sub">DIV2</div>
-    <div id="n3">DIV3</div>
-    <div class="sub">DIV4</div>
-    <div>DIV5</div>
-    <div id="fix">DIV6</div>
-    <div id="float">DIV7
-        <img src="movie.jpg" width="200px" style="float:left">
-        
-쇼생크 탈출은 스티븐 킹의 원고지 700매 분량 중편 소설을 원작으로 한 1994년 미국 영화이다.
-대체로 원작 소설의 내용에 충실하게 각색한 작품으로, 쇼생크 감옥에 갇힌 앤디 듀프레인을 중심으로 벌어지는 일을 그렸다. 
-아카데미 시상식 7개 부문에 후보에 올랐으며, 2015년부터 미국 의회도서관의 National Film Registry가 영구 보존하는 등 높은 평가를 받는다.
-    </div>
+    <header>
+        <div id="title">
+            <h1>Cine Planet</h1><hr>
+            <p> 영화의 모든 순간을 함께합니다. Cine Planet(씨네플래닛)에 오신 것을 환영합니다!<br>
+                이곳은 영화에 대한 열정을 가진 여러분과 함께 최신 영화 소식부터 숨겨진 명작까지 다양한 영화 이야기를 나누는 공간입니다.<br>
+                영화가 주는 감동과 즐거움을 더 많은 사람들과 공유해보세요!</p>
+        <div id="name">202303976 김두아</div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">영화별 리뷰</a></li>
+            <li><a href="#">영화 뉴스</a></li>
+            <li><a href="#">커뮤니티</a></li>
+            <li><a href="#">로그인</a></li>
+        </ul>
+    </nav>
+    <section id="search">
+        <h2>영화 검색</h2>
+        <p> 영화를 검색하여 관심있는 영화에 대한 정보를 확인하거나 리뷰를 작성해보세요.</p>
+        <input type="text" placeholder="영화 제목, 감독 검색">
+        <button id="search btn">검색</button>
+    </section>
+    <section id="review">
+        <h2>영화별 리뷰</h2>
+        <p>최신 영화부터 클래식 영화까지 다양한 리뷰를 확인하고 작성하세요.</p>
+        <ul>
+            <li><a href="#">대도시의 사랑법</a></li>
+            <li><a href="#">쇼생크탈출</a></li>
+            <li><a href="#">기생충</a></li>
+            <li><a href="#">파묘</a></li>
+        </ul>
+    </section>
+    <section id="news">
+        <h2>영화 뉴스</h2>
+        <p>최신 영화 소식 할리우드 또는 국내 영화계에서의 최신 뉴스를 전달합니다.</p>
+        <ul>
+            <li><a href="#">예고편 공개 소식</a></li>
+            <li><a href="#">개봉 예정작 정보</a></li>
+            <li><a href="#">배우들의 인터뷰</a></li>
+        </ul>
+    </section>
+    <section id="community">
+        <h2>커뮤니티</h2>
+        <p>영화 토론 포럼: 방문자들이 영화에 대해 토론할 수 있는 커뮤니티 게시판입니다.</p>
+           <textarea placeholder="배우, 감독에 대한 토론을 자유롭게 하세요." cols="30" rows="5" id="review text"></textarea>
+           <button id="submit-review">입력</button>
+    </section>
 
-    
+
 </body>
 </html>
