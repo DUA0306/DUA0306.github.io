@@ -10,61 +10,113 @@
             right: 80px;
             top:50px;
         }
-        #title{
-            background-color: rgb(238, 213, 226);
-            border: 5px solid rgb(221, 177, 203);
-            border-radius:40px;
+        body{
+            background-color: rgb(197, 225, 248);
+        }
+        #cover{
             padding: 20px;
+            color:white;
             text-align: center;
         }
-        nav{
-            background-color: rgb(152, 152, 180);
-            width:100%
+        #title{
+            font-size: 55px;
+            font-weight: bold;
+            color: white; 
+            -webkit-text-stroke-width: 3px; 
+            -webkit-text-stroke-color: rgb(131, 174, 210); 
+            text-align: center;
         }
-        nav ul{
-            width: 500px;
+        #sub{
+            text-align: center;
+
+        }
+        nav{
+            background-color: white;
+            width:100%;
+            font-size: 18px;
+            text-align: center;
         }
         nav ul li{
             display:inline-block;
-            text-align: center;
-            list-style-type:none ;
-            padding: 10px;
+            margin: 10px;
+            list-style-type: none;
+            padding: 0px 80px;
         }
         nav ul li a{
             text-decoration: none;
-            color: white;
+            color:black;
         }
-        section{
-            display: inline-block;
-            width:20%;
-            height:80%;
+        #blank{
+            background-color: white;
+            width:100%;
+            color: white;
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+        #container {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch; 
+            width: 100%; 
+            height: 100vh; 
+            box-sizing: border-box;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
 
+        section {
+            flex: 1;
+            width: 15%;
+            height: 100%;
+            box-sizing: border-box;
         }
         #search{
             padding:20px;
+            background-color: white;
+            border: 5px dashed rgb(191, 191, 206);
+            border-radius: 20px;
+        }
+        #search a{
+            color: gray;
         }
         #review{
             margin-left: 20px;
-            background-color: rgb(212, 235, 158);
+            background-color: white;
+            border: 2px solid rgb(6, 6, 51);
+            border-radius: 20px;
             padding:20px;
         }
-           
+        #review ul li a{
+            text-decoration: none;
+            color:black;
+        }  
         #news{ 
             margin-left: 20px;
-            background-color: rgb(209, 249, 209);
+            background-color: white;
+            border: 2px solid rgb(6, 6, 51);
+            border-radius: 20px;
             padding:20px;
         }
+        #news ul li a{
+            text-decoration: none;
+            color:black;
+        }  
         #community{
             margin-left: 20px;
             background-color: aliceblue;
+            border: 5px solid rgb(153, 187, 214);
+            border-radius: 20px;
             padding:20px;
+        }
+        #community a{
+            color: gray;
         }
     </style>
 </head>
 <body>
     <header>
-        <div id="title">
-            <h1>Cine Planet</h1><hr>
+        <div id="cover">
+            <h1 id="title">Cine Planet</h1><hr>
             <p> 영화의 모든 순간을 함께합니다. Cine Planet(씨네플래닛)에 오신 것을 환영합니다!<br>
                 이곳은 영화에 대한 열정을 가진 여러분과 함께 최신 영화 소식부터 숨겨진 명작까지 다양한 영화 이야기를 나누는 공간입니다.<br>
                 영화가 주는 감동과 즐거움을 더 많은 사람들과 공유해보세요!</p>
@@ -80,37 +132,71 @@
             <li><a href="#">로그인</a></li>
         </ul>
     </nav>
+    <div id="blank">공백</div>
+    <div id="container">
     <section id="search">
-        <h2>영화 검색</h2>
-        <p> 영화를 검색하여 관심있는 영화에 대한 정보를 확인하거나 리뷰를 작성해보세요.</p>
-        <input type="text" placeholder="영화 제목, 감독 검색">
-        <button id="search btn">검색</button>
+        <h2 id="sub">영화 검색</h2>
+        <p> 영화를 검색하여 관심있는 영화에 대한 정보를 확인하거나 리뷰를 작성해보세요.</p><hr><br>
+        <input type="text" placeholder="영화 제목, 감독, 배우 검색">
+        <button id="search btn">검색</button><br>
+        <a href="#">박찬욱</a>
+        <a href="#">베놈</a>
+        <a href="#">김고은</a>
+        <a href="#">전도연</a>
+        <a href="#">크리스토퍼 놀란</a>
+        <a href="#">청설</a>
+        <a href="#">한예리</a>
+        <br><br><hr>
+        <br><a><h4>실시간 인기영화</h4></a>
+        <a href="#"><img src="이미지폴더/search1.jpg" width="150" height="100">그것</a><br>
+        <a href="#"><img src="이미지폴더/search2.jpg" width="150" height="100">쇼생크탈출</a><br>
+        <a href="#"><img src="이미지폴더/search3.jpg" width="150" height="100">괴물</a><br>
     </section>
     <section id="review">
-        <h2>영화별 리뷰</h2>
-        <p>최신 영화부터 클래식 영화까지 다양한 리뷰를 확인하고 작성하세요.</p>
+        <h2 id="sub">영화별 리뷰</h2>
+        <p>최신 영화부터 클래식 영화까지 다양한 리뷰를 확인하고 작성하세요.</p><hr><br>
         <ul>
-            <li><a href="#">대도시의 사랑법</a></li>
-            <li><a href="#">쇼생크탈출</a></li>
-            <li><a href="#">기생충</a></li>
-            <li><a href="#">파묘</a></li>
+            <li><a href="#"><img src="이미지폴더/poster1.jpg" width="200" height="110"><br>대도시의 사랑법(★ 8.42/10)</a></li>
+            <li><a href="#"><img src="이미지폴더/poster2.jpg" width="200" height="110"><br>베테랑2(★ 6.62/10)</a></li>
+            <li><a href="#"><img src="이미지폴더/poster3.jpg" width="200" height="110"><br>위키드(★ 8.83/10)</a></li><hr>
+            ★별점 입력:<br>
+            0 <input type="range" min="0" max="10" list="rate">10
+            <datalist id="rate">
+            <option value="2" label="Low">
+            <option value="5" label="Medium">
+            <option value="8" label="High">
+            </datalist>
+            <br>
+            <textarea placeholder="리뷰 작성" cols="20" rows="1" id="review text"></textarea>
+           <button id="submit-review">등록</button>
         </ul>
     </section>
     <section id="news">
-        <h2>영화 뉴스</h2>
-        <p>최신 영화 소식 할리우드 또는 국내 영화계에서의 최신 뉴스를 전달합니다.</p>
+        <h2 id="sub">영화 뉴스</h2>
+        <p>최신 영화 소식 할리우드 또는 국내 영화계에서의 최신 뉴스를 전달합니다.</p><hr>
         <ul>
-            <li><a href="#">예고편 공개 소식</a></li>
-            <li><a href="#">개봉 예정작 정보</a></li>
-            <li><a href="#">배우들의 인터뷰</a></li>
+            <li><a href="#"><iframe width="250" height="150" src="https://www.youtube.com/embed/zKIN_aZM1Qc?si=txrREFBWhXHal4TH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            Moana2 공식 예고편</a></li>
+            <li><a href="#"><iframe width="250" height="150" src="https://www.wikitree.co.kr/articles/1002851"></iframe>
+            2024 박스오피스 흥행 순위</a></li>
+            <li><a href="#"><iframe width="250" height="150" src="https://www.youtube.com/embed/jQi8WPvebdg?si=PO1sqpbD9R-fRrbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            영화 '파묘' 비하인드 영상</a></li>
         </ul>
     </section>
     <section id="community">
-        <h2>커뮤니티</h2>
-        <p>영화 토론 포럼: 방문자들이 영화에 대해 토론할 수 있는 커뮤니티 게시판입니다.</p>
-           <textarea placeholder="배우, 감독에 대한 토론을 자유롭게 하세요." cols="30" rows="5" id="review text"></textarea>
-           <button id="submit-review">입력</button>
+        <h2 id="sub">커뮤니티</h2>
+        <p>영화 토론 포럼: 방문자들이 영화에 대해 토론할 수 있는 커뮤니티 게시판입니다.</p><hr>
+            <a><h3>★인기글★</h3></a>
+           <a href="#">스릴러 영화 추천</a><br><br>
+           <a href="#">탈주 시사회 후기</a><br><br>
+           <a href="#">영화 '하얼빈' 언제 개봉하나요?</a><br><br>
+           <a href="#">단편영화 추천합니다.</a><br><br>
+           <a href="#">서울독립영화제 예매</a><br><br>
+           <a href="#">12월 개봉 예정 영화</a><br><br><hr><br>
+           <textarea placeholder="배우, 감독에 대한 토론을 자유롭게 하세요." cols="30" rows="10" id="community text"></textarea>
+           <button id="submit-text">입력</button>
     </section>
+    </div>
 
 
 </body>
