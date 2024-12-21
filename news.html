@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>news</title>
+    <style>
+        body{
+        background-color:  rgb(197, 225, 248);
+        color: gray;
+        }
+        #text{
+            text-align: center;
+         }
+        #news{
+            text-align: center;
+            margin-top: 50px;
+            font-size: 55px;
+            font-weight: bold;
+            color: white; 
+            text-shadow: -3px 0 rgb(131, 174, 210), 0 -3px rgb(131, 174, 210),
+                3px 0 rgb(131, 174, 210), 0 3px rgb(131, 174, 210);
+            }
+        #semi-title{
+            font-size: 20px;
+            color:gray;
+            text-align: left;
+        }
+        a{
+            text-decoration: none;
+            color:black;
+            display: inline-block;
+            text-align: center;
+            margin-top: 50px;
+            margin: 15px; }
+        button{
+            background-color: rgb(230, 228, 180);
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id='news'>영화 뉴스</div>
+    <p id="text"> 최신 영화 소식 할리우드 또는 국내 영화계에서의 최신 뉴스를 전달합니다.</p><hr><br>
+    <a href="#"><p id="semi-title">얼마 남지 않은 '모아나2' 개봉!</p><iframe width="450px" height="300px" src="https://www.youtube.com/embed/zKIN_aZM1Qc?si=txrREFBWhXHal4TH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br>Moana2 공식 예고편
+        <button onclick=likeone()>이 뉴스가 도움되었어요!👍<span id="likeCountone">0</span></button></a>
+    <a href="#"> <p id="semi-title">2024 가장 흥행작이 궁금하다면?</p><iframe width="450px" height="300px" src="https://www.wikitree.co.kr/articles/1002851"></iframe>
+        <br>2024 박스오피스 흥행 순위<button onclick=liketwo()>이 뉴스가 도움되었어요!👍<span id="likeCounttwo">0</span></button></a>
+    <a href="#"><p id="semi-title">영화 '파묘'를 재미있게 봤다면?</p><iframe width="450px" height="300px" src="https://www.youtube.com/embed/jQi8WPvebdg?si=PO1sqpbD9R-fRrbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br>영화 '파묘' 비하인드 영상<button onclick=likethree()>이 뉴스가 도움되었어요!👍<span id="likeCountthree">0</span></button></a>
+    <script>
+        let countone=0;
+        function likeone(){
+            countone++;
+            document.getElementById("likeCountone").textContent=countone;
+        }
+    </script>
+    <script>
+        let counttwo=0;
+        function liketwo(){
+            counttwo++;
+            document.getElementById("likeCounttwo").textContent=counttwo;
+        }
+    </script>
+     <script>
+        let countthree=0;
+        function likethree(){
+            countthree++;
+            document.getElementById("likeCountthree").textContent=countthree;
+        }
+    </script>
+</body>
+</html>

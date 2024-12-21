@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>review</title>
+    <style>
+        body{
+         background-color:  rgb(197, 225, 248);
+         color: gray;
+         }
+         #text{
+            text-align: center;
+         }
+         #review{
+            text-align: center;
+            margin-top: 50px;
+            font-size: 55px;
+            font-weight: bold;
+            color: white; 
+            text-shadow: -3px 0 rgb(131, 174, 210), 0 -3px rgb(131, 174, 210),
+                3px 0 rgb(131, 174, 210), 0 3px rgb(131, 174, 210);
+            }
+        #semi-title{
+            font-size: 20px;
+        }
+        #rate select,
+        #rate input,
+        #rate button {
+            height: 36px;
+            font-size: 16px;
+        }
+        #rate{
+            text-align: center;
+            color: black;
+            margin: 20px 0;
+        }
+        #star{
+            color:gray;
+            height: 100px;
+            border: 2px solid rgb(131, 174, 210); 
+            border-radius: 5px; 
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+        #review-box{
+            width: 30%;
+            height: 100px;
+            border: 2px solid rgb(131, 174, 210); 
+            border-radius: 5px; 
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+        #review-btn{
+            width: 100px;
+            height: 40px;
+            font-size: 16px;
+            color: white;
+            background-color: rgb(131, 174, 210);
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        a{
+            text-decoration: none;
+            color:black;
+            display: inline-block;
+            text-align: center;
+            margin: 15px; }
+        #comment{
+            color: gray;
+            text-align: left;
+        }
+     </style>
+</head>
+<body>
+    <div id='review'>영화별 리뷰</div>
+    <p id="text"> 영화를 검색하여 관심있는 영화에 대한 정보를 확인하거나 리뷰를 작성해보세요.</p><hr><br><br>
+    <p id="semi-title">리뷰 쓰기</p>
+    <div id="rate">
+    ★별점 및 리뷰 입력:
+    <select name="dropbox" id="star">
+        <option value="0">★별점을 선택하세요</option>
+        <option value="1">★1</option>
+        <option value="2">★2</option>
+        <option value="3">★3</option>
+        <option value="4">★4</option>
+        <option value="5">★5</option>
+        <option value="6">★6</option>
+        <option value="7">★7</option>
+        <option value="8">★8</option>
+        <option value="9">★9</option>
+        <option value="10">★10</option>
+    </select>
+    <input type="text" id="review-box" placeholder="리뷰평을 자유롭게 써주세요! 스포일러X">
+    <input type="button" id="review-btn" onclick="checkSelection(document.getElementById('star'), ' 별점을 선택하여야합니다.')" value='등록' />
+    
+</div><br>
+    <p id="semi-title">최신 영화 리뷰 보기</p>
+    <a href="#"><img src="이미지폴더/poster1.jpg" width="200" height="110"><br>대도시의 사랑법(★ 8.42/10)
+        <p id="comment">제목만 봐서는 단순한 로맨스라는 기대를 깨는<br> 영화… 그이상을 보여준다.청춘, 성장에서 추억이<br>되살아나게하고 행복하게 해줬다.</p> 
+        </a>
+    <a href="#"><img src="이미지폴더/poster2.jpg" width="200" height="110"><br>베테랑2(★ 6.62/10)
+        <p id="comment">그 빌런인지 악연?.. 왜 그렇게 되는지 안알려줌..<br>다짜고짜 사람을 괴롭히고 죽이는지... 그 이유라도 <br>알려줬으면 좋았을텐데... 배우 연기 좋았습니다.</p>
+        </a>
+    <a href="#"><img src="이미지폴더/poster3.jpg" width="200" height="110"><br>위키드(★ 8.83/10)
+        <p id="comment">너무 길고 지루... 빌드업하기엔 스토리 빈약.<br>아리아나가 배역을 찰떡같이 소화해서 그런지 <br>영화관에서 종종 웃음이 들렸다</p></a>
+    <a href="#"><img src="이미지폴더/poster4.jpg" width="200" height="110"><br>사랑의 하츄핑(★ 8.71/10)
+        <p id="comment">아이들을 위한 영화니까 아이들 눈높이에서 보면 <br>10점 짜리 영화. 어른이 보기엔 8.5점 정도.<br> 노래 좋음, 감동 포인트 있음.</p>
+    </a>
+    <script>
+        function checkSelection(elem, msg) {
+        if (elem.value == 0) {
+        alert(msg);
+        elem.focus();
+        return false;
+        } else {
+        return true;
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>community</title>
+    <style>
+        body{
+        background-color:  rgb(197, 225, 248);
+        color: gray;
+        }
+        #text{
+           text-align: center;
+        }
+        #semi-title{
+            font-size: 20px;
+            color:gray;
+            text-align: left;
+        }
+        #community{
+           text-align: center;
+           margin-top: 50px;
+           font-size: 55px;
+           font-weight: bold;
+           color: white; 
+           text-shadow: -3px 0 rgb(131, 174, 210), 0 -3px rgb(131, 174, 210),
+               3px 0 rgb(131, 174, 210), 0 3px rgb(131, 174, 210);
+           }
+        #community-container{
+            text-align: center;
+        }
+        #community-text{
+            width: 80%; 
+            height: 300px; 
+            font-size: 16px; 
+            border: 2px solid rgb(131, 174, 210); 
+            border-radius: 5px; 
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+        #button{
+            width: 100px;
+            height: 40px;
+            font-size: 16px;
+            color: white;
+            background-color: rgb(131, 174, 210);
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        a{
+            color:black;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            margin-top: 50px;
+            margin: 15px; }
+        #post{
+            color:gray
+        }
+    </style>  
+</head>
+<body>
+    <div id='community'>커뮤니티</div>
+    <p id="text"> 영화 토론 포럼: 방문자들이 영화에 대해 이야기 나눌 수 있는 커뮤니티 게시판입니다.</p><hr>
+    <p id="semi-title">글쓰기</p>
+    <div id="community-container">
+        <input type="text" placeholder="10자 이상 작성해주세요!" id="community-text"><br>
+        <input type='button' onclick="checkLength(document.getElementById('community-text'), 10 )" value='입력'id="button" />
+    </div>
+    <p id="semi-title">★인기글★</p>
+        <a href="#">12월 개봉 예정 영화(👍11 / 댓글 2개)
+        <p id="post">12월 개봉 예정 영화 라이온킹, 1승, 나우...</p></a><br>
+        <a href="#">탈주 시사회 후기(👍26 / 댓글 14개)
+        <p id="post">탈주 시사회 다녀왔어요. 구교환 배...</p></a><br>
+        <a href="#">영화 '하얼빈' 언제 개봉하나요?(👍6 / 댓글 13개)
+        <p id="post">영화 '하얼빈' 언제 개봉하나요? 이번 년도...</p></a><br>
+    <script>
+        function checkLength(elem, min) {
+            let s = elem.value;
+            if (s.length >= min) {
+            alert("리뷰가 입력되었습니다!");
+            return true;
+            } 
+            else {
+            alert(min + " 자 이상 입력해주세요.");
+            elem.focus();
+            return false;
+            }
+        }
+    </script>
+</body>
+</html>
