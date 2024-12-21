@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹페이지</title>
+    <title>CINE PLANET</title>
     <style>
         #name{
             position: absolute;
@@ -22,8 +22,8 @@
             font-size: 55px;
             font-weight: bold;
             color: white; 
-            -webkit-text-stroke-width: 3px; 
-            -webkit-text-stroke-color: rgb(131, 174, 210); 
+            text-shadow: -4px 0 rgb(131, 174, 210), 0 -4px rgb(131, 174, 210),
+            4px 0 rgb(131, 174, 210), 0 4px rgb(131, 174, 210);
             text-align: center;
         }
         #sub{
@@ -58,7 +58,7 @@
             justify-content: space-around;
             align-items: stretch; 
             width: 100%; 
-            height: 110vh; 
+            height: 100vh; 
             box-sizing: border-box;
             gap: 10px;
             margin-bottom: 20px;
@@ -76,8 +76,29 @@
             border: 5px dashed rgb(191, 191, 206);
             border-radius: 20px;
         }
+        #search-box{
+            width: 75%;
+            height: 40px;
+            font-size: 16px; 
+            border: 2px solid rgb(131, 174, 210); 
+            border-radius: 5px; 
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+        #search-btn{
+            width: 50px;
+            height: 40px;
+            font-size: 16px;
+            color: white;   
+            background-color: rgb(131, 174, 210);
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
         #search a{
             color: gray;
+            padding: auto;
+            margin: auto;
         }
         #review{
             margin-left: 20px;
@@ -126,75 +147,60 @@
     <nav>
         <ul>
             <li><a href="#">홈</a></li>
-            <li><a href="#">영화별 리뷰</a></li>
-            <li><a href="#">영화 뉴스</a></li>
-            <li><a href="#">커뮤니티</a></li>
-            <li><a href="#">로그인</a></li>
+            <li><a href="review.html">영화별 리뷰</a></li>
+            <li><a href="news.html">영화 뉴스</a></li>
+            <li><a href="community.html">커뮤니티</a></li>
+            <li><a href="login.html">로그인</a></li>
         </ul>
     </nav>
     <div id="blank">공백</div>
     <div id="container">
+    <a href="search.html" style="text-decoration: none; color: black;">
     <section id="search">
-        <h2 id="sub">영화 검색</h2>
-        <p> 영화를 검색하여 관심있는 영화에 대한 정보를 확인하거나 리뷰를 작성해보세요.</p><hr><br>
-        <input type="text" placeholder="영화 제목, 감독, 배우 검색">
-        <button id="search btn">검색</button><br>
-        <a href="#">박찬욱</a>
-        <a href="#">베놈</a>
-        <a href="#">김고은</a>
-        <a href="#">전도연</a>
-        <a href="#">크리스토퍼 놀란</a>
-        <a href="#">청설</a>
-        <a href="#">한예리</a>
-        <br><br><hr>
-        <a><h4>실시간 인기영화</h4></a>
-        <a href="#"><img src="search1.jpg" width="150" height="100">그것</a><br>
-        <a href="#"><img src="search2.jpg" width="150" height="100">쇼생크탈출</a><br>
-        <a href="#"><img src="search3.jpg" width="150" height="100">괴물</a><br>
-    </section>
+        <h2 id="sub">영화 검색</h2><hr><br>
+        <input type="text" placeholder="영화 제목, 감독, 배우 검색" id="search-box">
+        <button id="search-btn">검색</button><br><br><hr>
+        <br><a><h4>실시간 검색 인기영화</h4></a>
+        <a href="#"><img src="이미지폴더/search1.jpg" width="150" height="100">그것</a><br>
+        <a href="#"><img src="이미지폴더/search2.jpg" width="150" height="100">쇼생크탈출</a><br>
+        <a href="#"><img src="이미지폴더/search3.jpg" width="150" height="100">괴물</a><br>
+    </section></a>
+    <a href="review.html" style="text-decoration: none; color: black;">
     <section id="review">
-        <h2 id="sub">영화별 리뷰</h2>
-        <p>최신 영화부터 클래식 영화까지 다양한 리뷰를 확인하고 작성하세요.</p><hr>
+        <h2 id="sub">영화별 리뷰</h2><hr><br>
         <ul>
-            <li><a href="#"><img src="poster1.jpg" width="200" height="110"><br>대도시의 사랑법(★ 8.42/10)</a></li>
-            <li><a href="#"><img src="poster2.jpg" width="200" height="110"><br>베테랑2(★ 6.62/10)</a></li>
-            <li><a href="#"><img src="poster3.jpg" width="200" height="110"><br>위키드(★ 8.83/10)</a></li><hr>
-            ★별점 입력:<br>
-            0 <input type="range" min="0" max="10" list="rate">10
-            <datalist id="rate">
-            <option value="2" label="Low">
-            <option value="5" label="Medium">
-            <option value="8" label="High">
-            </datalist>
-            <br>
-            <textarea placeholder="리뷰 작성" cols="20" rows="1" id="review text"></textarea>
-           <button id="submit-review">등록</button>
+            <li><a href="#"><img src="이미지폴더/poster1.jpg" width="200" height="110"><br>대도시의 사랑법(★ 8.42/10)</a></li>
+            <li><a href="#"><img src="이미지폴더/poster2.jpg" width="200" height="110"><br>베테랑2(★ 6.62/10)</a></li>
+            <li><a href="#"><img src="이미지폴더/poster3.jpg" width="200" height="110"><br>위키드(★ 8.83/10)</a></li>
+            <li><a href="#"><img src="이미지폴더/poster4.jpg" width="200" height="110"><br>사랑의 하츄핑(★ 8.71/10)</a></li> 
         </ul>
-    </section>
+        <a href="review.html" style="text-decoration: none; margin-left: 50%; color:gray" >나도 리뷰작성하기!-></a>
+    </section></a>
+    <a href="news.html" style="text-decoration: none; color: black;">
     <section id="news">
-        <h2 id="sub">영화 뉴스</h2>
-        <p>최신 영화 소식 할리우드 또는 국내 영화계에서의 최신 뉴스를 전달합니다.</p><hr>
+        <h2 id="sub">영화 뉴스</h2></p><hr>
         <ul>
             <li><a href="#"><iframe width="250" height="140" src="https://www.youtube.com/embed/zKIN_aZM1Qc?si=txrREFBWhXHal4TH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            Moana2 공식 예고편</a></li>
+            Moana2 공식 예고편</a></li><br>
             <li><a href="#"><iframe width="250" height="140" src="https://www.wikitree.co.kr/articles/1002851"></iframe>
-            2024 박스오피스 흥행 순위</a></li>
+            2024 박스오피스 흥행 순위</a></li><br>
             <li><a href="#"><iframe width="250" height="140" src="https://www.youtube.com/embed/jQi8WPvebdg?si=PO1sqpbD9R-fRrbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            영화 '파묘' 비하인드 영상</a></li>
+            영화 '파묘' 비하인드 영상</a></li><br>
         </ul>
-    </section>
+        <a href="news.html" style="text-decoration: none; margin-left: 45%; color:gray" >더 많은 뉴스 보러가기-></a>
+    </section></a>
+    <a href="community.html" style="text-decoration: none; color: black;">
     <section id="community">
-        <h2 id="sub">커뮤니티</h2>
-        <p>영화 토론 포럼: 방문자들이 영화에 대해 이야기 나눌 수 있는 커뮤니티 게시판입니다.</p><hr>
-            <a><h3>★인기글★</h3></a>
-           <a href="#">12월 개봉 예정 영화(👍11 / 댓글 2개)</a><br><br>
-           <a href="#">탈주 시사회 후기(👍26 / 댓글 14개)</a><br><br>
-           <a href="#">영화 '하얼빈' 언제 개봉하나요?(👍6 / 댓글 13개)</a><br><br>
-           <a href="#">단편영화 추천합니다.(👍21 / 댓글 5개)</a><br><br>
-           <a href="#">서울독립영화제 예매(👍9 / 댓글 8개)</a><br><br><hr>
-           글쓰기<br><textarea placeholder="배우, 감독에 대한 토론을 자유롭게 하세요." cols="30" rows="10" id="community text"></textarea>
-           <button id="submit-text">입력</button>
-    </section>
+        <h2 id="sub">커뮤니티</h2></p><hr>
+            <a><h3>★인기글★</h3></a><br>
+           <a href="#">스릴러 영화 추천(👍18 / 댓글 3개)</a><br><br><br>
+           <a href="#">탈주 시사회 후기(👍26 / 댓글 14개)</a><br><br><br>
+           <a href="#">영화 '하얼빈' 언제 개봉하나요?(👍6 / 댓글 13개)</a><br><br><br>
+           <a href="#">단편영화 추천합니다.(👍21 / 댓글 5개)</a><br><br><br>
+           <a href="#">서울독립영화제 예매(👍9 / 댓글 8개)</a><br><br><br>
+           <a href="#">12월 개봉 예정 영화(👍11 / 댓글 2개)</a><br><br><br><br><br><br>
+           <a href="community.html" style="text-decoration: none; margin-left: 45%; color:gray" >나도 글 작성하러 가기!-></a>
+    </section></a>
     </div>
 
 
