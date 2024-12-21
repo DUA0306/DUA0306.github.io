@@ -58,6 +58,11 @@
         #post{
             color:gray
         }
+        button{
+            background-color: rgb(230, 228, 180);
+            border: none;
+            border-radius: 5px;
+        }
     </style>  
 </head>
 <body>
@@ -69,11 +74,11 @@
         <input type='button' onclick="checkLength(document.getElementById('community-text'), 10 )" value='입력'id="button" />
     </div>
     <p id="semi-title">★인기글★</p>
-        <a href="#">12월 개봉 예정 영화(👍11 / 댓글 2개)
+        <a href="#">12월 개봉 예정 영화(👍<span id="likeCountone">11</span> / 댓글 2개)<button onclick=likeone()>이 글의 좋아요 누르기👍</button>
         <p id="post">12월 개봉 예정 영화 라이온킹, 1승, 나우...</p></a><br>
-        <a href="#">탈주 시사회 후기(👍26 / 댓글 14개)
+        <a href="#">탈주 시사회 후기(👍<span id="likeCounttwo">26</span>/ 댓글 14개)<button onclick=liketwo()>이 글의 좋아요 누르기👍</button>
         <p id="post">탈주 시사회 다녀왔어요. 구교환 배...</p></a><br>
-        <a href="#">영화 '하얼빈' 언제 개봉하나요?(👍6 / 댓글 13개)
+        <a href="#">영화 '하얼빈' 언제 개봉하나요?(👍<span id="likeCountthree">6</span> / 댓글 13개)<button onclick=likethree()>이 글의 좋아요 누르기👍</button>
         <p id="post">영화 '하얼빈' 언제 개봉하나요? 이번 년도...</p></a><br>
     <script>
         function checkLength(elem, min) {
@@ -87,6 +92,23 @@
             elem.focus();
             return false;
             }
+        }
+    </script>
+    <script>
+        let countone=11;
+        function likeone(){
+            countone++;
+            document.getElementById("likeCountone").textContent=countone;
+        }
+        let counttwo=26;
+        function liketwo(){
+            counttwo++;
+            document.getElementById("likeCounttwo").textContent=counttwo;
+        }
+        let countthree=6;
+        function likethree(){
+            countthree++;
+            document.getElementById("likeCountthree").textContent=countthree;
         }
     </script>
 </body>
